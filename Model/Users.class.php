@@ -1,13 +1,12 @@
 <?php
-
 namespace App\Model;
-
-class User extends \App\Core\BaseSQL
+use App\Core\BaseSQL;
+class Users extends BaseSQL
 {
-    protected $id = null;
-    protected $email;
-    protected $password;
-    protected $firstname;
+    protected ?int $id = null;
+    protected ?string $email;
+    protected ?string $password;
+    protected ?string $name;
 
     public function __construct()
     {
@@ -57,23 +56,23 @@ class User extends \App\Core\BaseSQL
     /**
      * @return mixed
      */
-    public function getFirstname(): string
+    public function getName(): string
     {
-        return $this->firstname;
+        return $this->name;
     }
 
     /**
-     * @param mixed $firstname
+     * @param mixed $name
      */
-    public function setFirstname($firstname): void
+    public function setName($name): void
     {
-        $this->firstname = ucwords(strtolower(trim($firstname)));
+        $this->name = ucwords(strtolower(trim($name)));
     }
 
-//    public function save()
-//    {
-//        parent::save();
-//    }
+    public function save():void
+    {
+        parent::save();
+    }
 
 
     public function getFormRegister(): array
@@ -112,7 +111,7 @@ class User extends \App\Core\BaseSQL
                     "confirm"=>"password",
                     "error"=>"Votre mot de passe de confirmation ne correspond pas",
                 ],
-                "firstname"=>[
+                "name"=>[
                     "type"=>"text",
                     "placeholder"=>"Prénom ...",
                     "id"=>"firstnameRegister",

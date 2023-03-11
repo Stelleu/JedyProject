@@ -15,6 +15,7 @@ class View
 
     public function setView($view):void
     {
+
         $this->view = strtolower($view);
     }
     public function setTemplate($template):void
@@ -42,6 +43,8 @@ class View
 
     public function __destruct()
     {
+        echo"oui";
+
         extract($this->data);
         include "View/".$this->template.".tpl.php";
     }

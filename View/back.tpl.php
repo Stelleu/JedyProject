@@ -10,5 +10,4 @@
 
 <?php
 //Inclusion de la vue appeler dans l'assign
-include $this->view.".view.php";
-?>
+include $this->view.".view.php"; ?>
