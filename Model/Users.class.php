@@ -74,6 +74,11 @@ class Users extends BaseSQL
         parent::save();
     }
 
+    public function getAll():object
+    {
+       return parent::getAll();
+    }
+
 
     public function getFormRegister(): array
     {

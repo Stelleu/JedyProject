@@ -11,21 +11,13 @@ class Admin
     {
 
         $user = new Users();
-        $firstname = "Yves";
-        $lastname = "SKRZYPCZYK";
-        print_r($_POST);
-        if( !empty($_POST)){
-            $result = Validator::run($user->getFormRegister(), $_POST);
-            print_r($result);
-        $user->setEmail($_POST["email"]);
-        $user->setName($_POST["name"]);
-        $user->setPassword($_POST["password"]);
-        $user->save();
-        }
+        $users = new Users();
+        $users = $users->getAll();
+        print_r($users);
         $view = new View("dashboard", "back");
         $view->assign("user",$user);
-        $view->assign("firstname", $firstname);
-        $view->assign("lastname", $lastname);
+        $view->assign("users",$users);
+
 
 
     }

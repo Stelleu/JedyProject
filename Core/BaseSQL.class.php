@@ -33,6 +33,13 @@ abstract class BaseSQL
         $queryPrepared->execute( ["id"=>$id] );
         return $queryPrepared->fetchObject(get_called_class());
     }
+    public function getAll(): object
+    {
+        $sql = "SELECT * FROM ".$this->table;
+        $queryPrepared = $this->pdo->prepare($sql);
+        $queryPrepared->execute();
+        return $queryPrepared->fetchObject(get_called_class());
+    }
 
 
     protected function save(): void
