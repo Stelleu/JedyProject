@@ -42,12 +42,9 @@ abstract class BaseSQL
     }
     public function deleteId($id): void
     {
-
-        var_dump($id);
         $sql = "DELETE  FROM ".$this->table. " WHERE ID=:ID ";
         $queryPrepared = $this->pdo->prepare($sql);
         $queryPrepared->execute( ["ID"=>$id]);
-       var_dump( $queryPrepared);
     }
 
 
