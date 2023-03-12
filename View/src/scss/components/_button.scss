@@ -39,4 +39,12 @@ button {
       background-color: lighten(red, 10%);
     }
   }
+    &-sucess {
+    background-color: green !important;
+    border: 1px solid green;
+
+    &:hover {
+      background-color: lighten(green, 10%);
+    }
+  }
 }

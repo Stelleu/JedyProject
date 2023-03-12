@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -396,6 +397,7 @@
 body {
   background-color: white;
   margin: 0;
+  font-family: "Roboto";
 }
 
 h1 {
@@ -2498,6 +2500,13 @@ button {
 .button-alert:hover {
   background-color: #ff3333;
 }
+.button-sucess {
+  background-color: green !important;
+  border: 1px solid green;
+}
+.button-sucess:hover {
+  background-color: #00b300;
+}
 
 .form-input {
   display: block;
@@ -2560,6 +2569,72 @@ tbody, td, th, thead, tr {
 
 .table-hover tbody tr:hover > * {
   background-color: #c9cfd4;
+}
+
+nav {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+nav .nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+nav .nav-header img {
+  width: 70px;
+}
+nav .nav-header .fa-bars {
+  cursor: pointer;
+}
+nav .menu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  list-style-type: none;
+}
+nav .menu a {
+  color: #003ea9;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+nav .menu a:hover {
+  color: #e94949;
+}
+nav .show-menu {
+  height: 200px;
+}
+
+@media (min-width: 800px) {
+  .nav-main {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-main .nav-header {
+    padding: 0;
+  }
+  .nav-main .nav-header .fa-bars {
+    display: none;
+  }
+  .nav-main .menu {
+    height: auto;
+    display: flex;
+  }
+  .nav-main .menu a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .nav-main .menu a:hover {
+    padding: 0;
+    background: transparent;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

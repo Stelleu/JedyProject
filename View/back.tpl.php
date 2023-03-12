@@ -10,6 +10,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js" integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body>
+    <header>
+        <nav>
+            <div class="nav-main">
+                <div class="nav-header">
+                    <h1>Jedy Test</h1>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="#">CRUD</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
     <main>
 
         <?php
@@ -17,6 +32,13 @@
         include $this->view.".view.php";
         ?>
     </main>
+    <script>
+        $(document).ready(function () {
+            $(".fa-bars").click(function () {
+                $(".menu").toggleClass("show-menu");
+            });
+        });
 
+    </script>
     </body>
 </html>

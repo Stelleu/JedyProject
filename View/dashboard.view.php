@@ -1,5 +1,20 @@
-<h1>Tableau de bord</h1>
-<h2>Welcome</h2>
+<section>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col tx-center">
+                <h2 class="my-3">CRUD</h2>
+                <p> Voici l'API REST comme souhaiter, je n'ai pas eu le temps de mettre en place la partie UPDATE néanmoins
+                j'ai mis le code en commentaire.
+                    <br>
+                Malheuresement l'interface n'est pas aussi pofiner que je l'aurais souhaitée (plusieurs longs moments de debug, on eu raison de l'idée fixer dans ma tête).
+                    <br>
+                Malgrés cela j'espere vous avoir donnée un bon apercu de ma facon de coder et que cela vous convient .
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
 <section>
     <div class="container">
         <div class="row mb-2">
@@ -33,13 +48,23 @@
                             <th > <?php echo $infoUser["Name"]?></th>
                             <th> <?php echo $infoUser["Email"]?></th>
                             <th>
-                                <form method="post" id="delete" action="delete">
-                                        <input hidden name="id" value="<?= $infoUser["ID"]?>">
-                                        <button type="submit" class="button button-alert" >
-                                            delete
-                                        </button>
-                                        </a>
-                                </form>
+                                <div class="row">
+
+                                    <form method="post" id="delete" action="delete" class="ps-2">
+                                            <input hidden name="id" value="<?= $infoUser["ID"]?>">
+                                            <button type="submit" class="button button-alert" >
+                                                delete
+                                            </button>
+                                            </a>
+                                    </form>
+                                    <form method="post" id="delete" action="edit">
+                                            <input hidden name="id" value="<?= $infoUser["ID"]?>">
+                                            <button type="submit" class="button button-sucess" >
+                                                edit
+                                            </button>
+                                            </a>
+                                    </form>
+                                </div>
                             </th>
                         </tr>
                     <?php }?>
