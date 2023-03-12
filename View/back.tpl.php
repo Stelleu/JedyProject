@@ -32,5 +32,6 @@
         include $this->view.".view.php";
         ?>
     </main>
+    <script src="src/js/main.js" type="text/javascript"></script>
     </body>
 </html>
