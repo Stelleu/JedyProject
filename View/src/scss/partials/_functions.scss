@@ -1,0 +1,122 @@
+@function rem($px) {
+  $base: 16;
+  @return calc(($px / $base) * 1rem);
+}
+
+@mixin cover-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin transition{
+  transition: all 0.3s ease-in-out;
+}
+@mixin box-shadow(){
+  box-shadow:0 0.125rem 0.25rem rgba(0,0,0,0.25);
+}
+//PADDING
+@each $number,$spacing in $spacers{
+   
+    .px-#{$number} {
+      padding-left:$spacing ;
+      padding-right:$spacing;
+
+    }
+  }
+
+@each $number,$spacing in $spacers{
+  //  
+    .py-#{$number} {
+      padding-top:$spacing ;
+      padding-bottom: $spacing;
+
+    }
+  }
+@each $number,$spacing in $spacers{
+   
+    .pt-#{$number} {
+      padding-top:$spacing ;
+    }
+  }
+
+@each $number,$spacing in $spacers{
+   
+    .pb-#{$number} {
+      padding-bottom:$spacing ;
+
+    }
+  }
+
+@each $number,$spacing in $spacers{
+   
+    .pe-#{$number} {
+      padding-left:$spacing ;
+    }
+  }
+
+@each $number,$spacing in $spacers{
+   
+    .ps-#{$number} {
+      padding-right: $spacing;
+
+    }
+  }
+
+  //MARGIN
+  .mb-none {
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+@each $number,$spacing in $spacers{
+   
+  .mx-#{$number} {
+    margin-left:$spacing ;
+    margin-right:$spacing;
+
+  }
+}
+
+@each $number,$spacing in $spacers{  
+  .my-#{$number} {
+    margin-top:$spacing ;
+    margin-bottom: $spacing;
+
+  }
+}
+@each $number,$spacing in $spacers{
+ 
+  .mt-#{$number} {
+    margin-top:$spacing ;
+  }
+}
+
+@each $number,$spacing in $spacers{
+ 
+  .mb-#{$number} {
+    margin-bottom:$spacing ;
+
+  }
+}
+
+@each $number,$spacing in $spacers{
+ 
+  .me-#{$number} {
+    margin-left:$spacing ;
+  }
+}
+
+@each $number,$spacing in $spacers{
+ 
+  .ms-#{$number} {
+    margin-right: $spacing;
+
+  }
+}
+@each $number,$fs in $font-sizes{
+   
+  .fs-#{$number} {
+    font-size: $fs ;
+  }
+}
+
+

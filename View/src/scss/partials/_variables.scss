@@ -1,0 +1,60 @@
+// GRID VARIABLES
+$grid-columns: 12;
+$grid-row-columns: 6;
+$gutter-x: 1.5rem;
+$gutter-y: 0;
+$width: 1140px;
+$gutter: 15px;
+
+$grid-breakpoints: (
+  "xxs": 0,
+  "xs": 320,
+  "sm": 480,
+  "md": 768,
+  "lg": 992,
+  "xl": 1200,
+  "xxl": 1400,
+);
+
+// SPACER VARIABLES
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+//COLORS
+$bg-color: lightgrey;
+$blue: #003b95;
+$white: #fff;
+$grey: #aaa;
+$light-grey: #f2f2f2;
+$light-blue: #55657b;
+$dark-grey: #444;
+$red: #ce0a0a;
+$green: #31aa66;
+$yellow: #febb02;
+$black: #000;
+$black-accent: #262626;
+
+//FONT
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+);

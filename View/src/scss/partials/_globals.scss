@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: $font1;
+  margin : 0;
+}
+
+h1 {
+  font-size: rem(24);
+  font-family: $font2;
+}
+
+h2 {
+  font-size: rem(16);
+  font-family: $font2;
+}
+p{
+  font-size: rem(14);
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+
+}
+
+// .container {
+//   max-width: rem(1264);
+//   margin: 0 auto;
+// }
+
+.section-button {
+  margin-bottom: rem(24);
+}
+
+// section {
+//   width: 1140px;
+//   margin: auto;
+// }
