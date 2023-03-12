@@ -3,12 +3,11 @@
         <div class="row my-5">
             <div class="col tx-center">
                 <h2 class="my-3">CRUD</h2>
-                <p> Voici l'API REST comme souhaiter, je n'ai pas eu le temps de mettre en place la partie UPDATE néanmoins
-                j'ai mis le code en commentaire.
+                <p> Voici l'API REST comme souhaiter, je n'ai pas eu le temps de mettre en place la partie UPDATE néanmoins j'ai mis le code en commentaire.
                     <br>
-                Malheuresement l'interface n'est pas aussi pofiner que je l'aurais souhaitée (plusieurs longs moments de debug, on eu raison de l'idée fixer dans ma tête).
+                    Malheureusement l'interface n'est pas aussi peaufiner que je l'aurais souhaitée (plusieurs longs moments de debug, on eut raison de moi).
                     <br>
-                Malgrés cela j'espere vous avoir donnée un bon apercu de ma facon de coder et que cela vous convient .
+                    Malgré cela j'espère vous avoir donné un bon aperçu de ma façon de coder et que cela vous convient..
                 </p>
 
             </div>

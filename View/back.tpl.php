@@ -32,13 +32,5 @@
         include $this->view.".view.php";
         ?>
     </main>
-    <script>
-        $(document).ready(function () {
-            $(".fa-bars").click(function () {
-                $(".menu").toggleClass("show-menu");
-            });
-        });
-
-    </script>
     </body>
 </html>

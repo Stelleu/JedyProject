@@ -40,11 +40,11 @@ button {
     }
   }
     &-sucess {
-    background-color: green !important;
-    border: 1px solid green;
+    background-color: #198754 !important;
+    border: 1px solid #198754;
 
     &:hover {
-      background-color: lighten(green, 10%);
+      background-color: lighten(#198754, 10%);
     }
   }
 }

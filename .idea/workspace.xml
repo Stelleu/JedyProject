@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89bd68dc-7480-4ade-bbd1-915c52aabbf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/View/src/scss/components/_footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/scss/components/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/back.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/back.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/dashboard.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/dashboard.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/scss/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/scss/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/scss/partials/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/scss/partials/_globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/scss/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/scss/components/_table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/scss/components/_table.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

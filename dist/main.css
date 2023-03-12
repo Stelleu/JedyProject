@@ -2501,11 +2501,11 @@ button {
   background-color: #ff3333;
 }
 .button-sucess {
-  background-color: green !important;
-  border: 1px solid green;
+  background-color: #198754 !important;
+  border: 1px solid #198754;
 }
 .button-sucess:hover {
-  background-color: #00b300;
+  background-color: #21b26f;
 }
 
 .form-input {
@@ -2539,10 +2539,12 @@ tbody, td, th, thead, tr {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
+  font-weight: 400;
 }
 
 .table {
   width: 100%;
+  padding-top: 2rem;
   margin-bottom: 1rem;
   vertical-align: top;
   border-color: #574950;
@@ -2554,6 +2556,9 @@ tbody, td, th, thead, tr {
 }
 .table thead {
   vertical-align: bottom;
+}
+.table thead th {
+  font-weight: bold;
 }
 .table th {
   color: black;
@@ -2603,38 +2608,6 @@ nav .menu a {
 }
 nav .menu a:hover {
   color: #e94949;
-}
-nav .show-menu {
-  height: 200px;
-}
-
-@media (min-width: 800px) {
-  .nav-main {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  .nav-main .nav-header {
-    padding: 0;
-  }
-  .nav-main .nav-header .fa-bars {
-    display: none;
-  }
-  .nav-main .menu {
-    height: auto;
-    display: flex;
-  }
-  .nav-main .menu a {
-    padding: 0;
-    margin: 0 0.5rem;
-  }
-  .nav-main .menu a:hover {
-    padding: 0;
-    background: transparent;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
