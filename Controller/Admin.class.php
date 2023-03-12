@@ -9,17 +9,12 @@ class Admin
 {
     public function showAll(): void
     {
-
         $user = new Users();
         $users = new Users();
         $users = $users->getAll();
-        print_r($users);
         $view = new View("dashboard", "back");
-        $view->assign("user",$user);
         $view->assign("users",$users);
-
-
-
+        $view->assign("user",$user);
     }
     public function addUser(): void
     {
@@ -30,25 +25,30 @@ class Admin
             $user->setName($_POST["name"]);
             $user->setPassword($_POST["password"]);
             $user->save();
+            $this->showAll();
         }
-        $view = new View("dashboard", "back");
-        $view->assign("user",$user);
     }
-    public function updateUser(): void
-    {
-        $user = new Users();
-        $user->setId($_GET["id"]);
-        $user->save();
-        $view = new View("dashboard", "back");
-        $view->assign("user",$user);
-    }
+//    public function updateUser(): void
+//    {
+//        $user = new Users();
+//        $user->selectId($_POST["id"]);
+//        if(($_POST["edit"])){
+//
+//            $user->save();
+//        }
+//        $user->save();
+//        $view = new View("dashboard", "back");
+//        $view->assign("user",$user);
+//    }
 
     public function deleteUser(): void
     {
         $user = new Users();
-        $user->setId($_GET["id"]);
-        $user->deleteId($user->getId());
+        $user->deleteId($_POST["id"]);
+        $users = new Users();
+        $users = $users->getAll();
         $view = new View("dashboard", "back");
+        $view->assign("users",$users);
         $view->assign("user",$user);
     }
 }

@@ -6,18 +6,15 @@
 
 body {
   background-color: white;
-  font-family: $font1;
   margin : 0;
 }
 
 h1 {
   font-size: rem(24);
-  font-family: $font2;
 }
 
 h2 {
   font-size: rem(16);
-  font-family: $font2;
 }
 p{
   font-size: rem(14);
@@ -29,16 +26,3 @@ p{
 
 }
 
-// .container {
-//   max-width: rem(1264);
-//   margin: 0 auto;
-// }
-
-.section-button {
-  margin-bottom: rem(24);
-}
-
-// section {
-//   width: 1140px;
-//   margin: auto;
-// }
