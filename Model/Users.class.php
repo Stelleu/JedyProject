@@ -3,7 +3,7 @@ namespace App\Model;
 use App\Core\BaseSQL;
 class Users extends BaseSQL
 {
-    protected ?int $id = null;
+    protected   $id ;
     protected ?string $email;
     protected ?string $password;
     protected ?string $name;
@@ -80,15 +80,16 @@ class Users extends BaseSQL
         return [
             "config"=>[
                 "method"=>"POST",
-                "action"=>"",
-                "submit"=>"Ajouter l'utilisateur"
+                "action"=>"create",
+                "submit"=>"Valider",
+                "id" =>"add"
             ],
             "inputs"=>[
                 "email"=>[
                     "type"=>"email",
                     "placeholder"=>"Votre email ...",
                     "id"=>"emailRegister",
-                    "class"=>"inputRegister",
+                    "class"=>"form-input",
                     "required"=>true,
                     "error"=>"Email incorrect",
                     "unicity"=>true,
@@ -98,7 +99,7 @@ class Users extends BaseSQL
                     "type"=>"password",
                     "placeholder"=>"Votre mot de passe ...",
                     "id"=>"pwdRegister",
-                    "class"=>"inputRegister",
+                    "class"=>"form-input",
                     "required"=>true,
                     "error"=>"Votre mot de passe doit faire entre 8 et 16 et contenir des chiffres et des lettres",
                 ],
@@ -106,7 +107,7 @@ class Users extends BaseSQL
                     "type"=>"password",
                     "placeholder"=>"Confirmation ...",
                     "id"=>"pwdConfirmRegister",
-                    "class"=>"inputRegister",
+                    "class"=>"form-input",
                     "required"=>true,
                     "confirm"=>"password",
                     "error"=>"Votre mot de passe de confirmation ne correspond pas",
@@ -115,49 +116,11 @@ class Users extends BaseSQL
                     "type"=>"text",
                     "placeholder"=>"Prénom ...",
                     "id"=>"firstnameRegister",
-                    "class"=>"inputRegister",
+                    "class"=>"form-input",
                     "min"=>2,
                     "max"=>50,
                     "error"=>"Votre prénom n'est pas correct",
                 ],
-                "lastname"=>[
-                    "type"=>"text",
-                    "placeholder"=>"Nom ...",
-                    "id"=>"lastnameRegister",
-                    "class"=>"inputRegister",
-                    "min"=>2,
-                    "max"=>100,
-                    "error"=>"Votre nom n'est pas correct",
-                ],
-            ]
-
-        ];
-    }
-
-
-    public function getFormLogin(): array
-    {
-        return [
-            "config"=>[
-                "method"=>"POST",
-                "action"=>"",
-                "submit"=>"Se connecter"
-            ],
-            "inputs"=>[
-                "email"=>[
-                    "type"=>"email",
-                    "placeholder"=>"Votre email ...",
-                    "id"=>"emailRegister",
-                    "class"=>"inputRegister",
-                    "required"=>true,
-                ],
-                "password"=>[
-                    "type"=>"password",
-                    "placeholder"=>"Votre mot de passe ...",
-                    "id"=>"pwdRegister",
-                    "class"=>"inputRegister",
-                    "required"=>true,
-                ]
             ]
 
         ];

@@ -26,25 +26,25 @@ abstract class BaseSQL
     /**
      * @param mixed $id
      */
-    public function setId($id): object
+    public function selectId($id): object
     {
         $sql = "SELECT * FROM ".$this->table. " WHERE id=:id ";
         $queryPrepared = $this->pdo->prepare($sql);
         $queryPrepared->execute( ["id"=>$id] );
         return $queryPrepared->fetchObject(get_called_class());
     }
-    public function getAll(): object
+    public function getAll(): array|bool
     {
         $sql = "SELECT * FROM ".$this->table;
         $queryPrepared = $this->pdo->prepare($sql);
         $queryPrepared->execute();
-        return $queryPrepared->fetchObject(get_called_class());
+        return $queryPrepared->fetchAll();
     }
     public function deleteId($id): void
     {
-        $sql = "DELETE  FROM ".$this->table. " WHERE id=:id ";
+        $sql = "DELETE  FROM ".$this->table. " WHERE ID=:ID ";
         $queryPrepared = $this->pdo->prepare($sql);
-        $queryPrepared->execute( ["id"=>$id] );
+        $queryPrepared->execute( ["ID"=>$id]);
     }
 
 
@@ -53,24 +53,21 @@ abstract class BaseSQL
 
         $columns  = get_object_vars($this);
         $varsToExclude = get_class_vars(get_class());
-        var_dump(array_diff_key($columns, $varsToExclude));
         $columns = array_diff_key($columns, $varsToExclude);
         $columns = array_filter($columns);
-//        var_dump($columns);
 
 
         if( !is_null($this->getId()) ){
             foreach ($columns as $key=>$value){
                 $setUpdate[]=$key."=:".$key;
             }
-            $sql = "UPDATE ".$this->table." SET ".implode(",",$setUpdate)." WHERE id=".$this->getId();
+            $sql = "UPDATE ".$this->table." SET ".implode(",",$setUpdate)." WHERE ID=".$this->getId();
         }else{
             $sql = "INSERT INTO ".$this->table." (".implode(",", array_keys($columns)).")
             VALUES (:".implode(",:", array_keys($columns)).")";
         }
 
         $queryPrepared = $this->pdo->prepare($sql);
-        var_dump($queryPrepared);
 
         $queryPrepared->execute( $columns );
 
