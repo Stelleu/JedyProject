@@ -1,0 +1,50 @@
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+}
+.button {
+  display: inline-block;
+  padding: .375em .75em;
+  color: $white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  border-radius: 0.375rem;
+  font-size: rem(16);
+  vertical-align: middle;
+
+
+  &:hover {
+    background-color: lighten($grey, 10%);
+  }
+
+  &-black {
+    background-color: black;
+    border: 1px solid black;
+
+    &:hover {
+      background-color: lighten(black, 10%);
+    }
+
+  }
+    &-alert {
+    background-color: red !important;
+    border: 1px solid red;
+
+    &:hover {
+      background-color: lighten(red, 10%);
+    }
+  }
+    &-sucess {
+    background-color: #198754 !important;
+    border: 1px solid #198754;
+
+    &:hover {
+      background-color: lighten(#198754, 10%);
+    }
+  }
+}

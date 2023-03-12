@@ -1,0 +1,129 @@
+<?php
+namespace App\Model;
+use App\Core\BaseSQL;
+class Users extends BaseSQL
+{
+    protected   $id ;
+    protected ?string $email;
+    protected ?string $password;
+    protected ?string $name;
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+    /**
+     * @return mixed
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email): void
+    {
+        $this->email = strtolower(trim($email));
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password): void
+    {
+        $this->password = password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = ucwords(strtolower(trim($name)));
+    }
+
+    public function save():void
+    {
+        parent::save();
+    }
+
+
+    public function getFormRegister(): array
+    {
+        return [
+            "config"=>[
+                "method"=>"POST",
+                "action"=>"create",
+                "submit"=>"Valider",
+                "id" =>"add"
+            ],
+            "inputs"=>[
+                "email"=>[
+                    "type"=>"email",
+                    "placeholder"=>"Votre email ...",
+                    "id"=>"emailRegister",
+                    "class"=>"form-input",
+                    "required"=>true,
+                    "error"=>"Email incorrect",
+                    "unicity"=>true,
+                    "errorUnicity"=>"Email existe déjà en bdd"
+                ],
+                "password"=>[
+                    "type"=>"password",
+                    "placeholder"=>"Votre mot de passe ...",
+                    "id"=>"pwdRegister",
+                    "class"=>"form-input",
+                    "required"=>true,
+                    "error"=>"Votre mot de passe doit faire entre 8 et 16 et contenir des chiffres et des lettres",
+                ],
+                "passwordConfirm"=>[
+                    "type"=>"password",
+                    "placeholder"=>"Confirmation ...",
+                    "id"=>"pwdConfirmRegister",
+                    "class"=>"form-input",
+                    "required"=>true,
+                    "confirm"=>"password",
+                    "error"=>"Votre mot de passe de confirmation ne correspond pas",
+                ],
+                "name"=>[
+                    "type"=>"text",
+                    "placeholder"=>"Prénom ...",
+                    "id"=>"firstnameRegister",
+                    "class"=>"form-input",
+                    "min"=>2,
+                    "max"=>50,
+                    "error"=>"Votre prénom n'est pas correct",
+                ],
+            ]
+
+        ];
+    }
+
+}

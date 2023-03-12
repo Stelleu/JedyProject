@@ -1,0 +1,22 @@
+{
+  "/":{
+    "controller": "admin",
+    "action": "showAll"
+  },
+  "/create": {
+    "controller": "admin",
+    "action": "addUser"
+  },
+  "/show": {
+    "controller": "admin",
+    "action": "showUser"
+  },
+  "/update": {
+    "controller": "admin",
+    "action": "updateUser"
+  },
+  "/delete": {
+    "controller": "admin",
+    "action": "deleteUser"
+  }
+}
