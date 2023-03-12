@@ -40,6 +40,12 @@ abstract class BaseSQL
         $queryPrepared->execute();
         return $queryPrepared->fetchObject(get_called_class());
     }
+    public function deleteId($id): void
+    {
+        $sql = "DELETE  FROM ".$this->table. " WHERE id=:id ";
+        $queryPrepared = $this->pdo->prepare($sql);
+        $queryPrepared->execute( ["id"=>$id] );
+    }
 
 
     protected function save(): void

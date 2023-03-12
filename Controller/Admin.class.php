@@ -34,4 +34,21 @@ class Admin
         $view = new View("dashboard", "back");
         $view->assign("user",$user);
     }
+    public function updateUser(): void
+    {
+        $user = new Users();
+        $user->setId($_GET["id"]);
+        $user->save();
+        $view = new View("dashboard", "back");
+        $view->assign("user",$user);
+    }
+
+    public function deleteUser(): void
+    {
+        $user = new Users();
+        $user->setId($_GET["id"]);
+        $user->deleteId($user->getId());
+        $view = new View("dashboard", "back");
+        $view->assign("user",$user);
+    }
 }
